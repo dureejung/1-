@@ -1,0 +1,11 @@
+covid$확진일<-ymd(covid$확진일)
+
+  covid%>%
+    filter(지역=='동작구')%>%
+    count(확진일)%>%
+    arrange(확진일)%>%
+    ggplot(aes(x=확진일,y=n))+
+    geom_line()+
+    scale_x_date(name="확진일", date_breaks="month", date_labels="%m")+
+    scale_y_continuous(name = "확진자수") 
+   
