@@ -102,3 +102,4 @@ total %>%
             position = position_stack(vjust=0.5)) +
 
   scale_fill_brewer(palette="Pastel1")
+  
